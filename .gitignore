@@ -1,0 +1,7 @@
+# vscode
+.vscode
+
+# npm
+node_modules
+*storybook.log
+storybook-static
