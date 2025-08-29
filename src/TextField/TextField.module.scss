@@ -1,0 +1,65 @@
+@import "../_variables";
+
+.label{
+    margin-bottom:15px;
+    position:relative;
+    border-bottom:1px solid #ddd;
+}
+
+.textField {
+    font-family: $primary-font-family;;
+    width:100%;
+    padding:10px 5px;
+    margin-top:20px;
+    outline:none;
+    border-radius: 4px;
+
+    &.error {
+        border-color: $error-color;
+    }
+
+    &::placeholder {
+        opacity: 0;
+    }
+}
+
+.span{
+    font-family: $primary-font-family;
+    position:absolute;
+    top:-14px;
+    left:0;
+    transform:translateY(15px);
+    font-size:0.825em;
+    transition-duration:300ms;
+    padding-left: 10px;
+    opacity: 0.5;
+
+    &.error {
+        color: $error-color;
+    }
+}
+
+.label:focus-within > .span,
+.textField:not(:placeholder-shown) + .span{
+    color: $primary-color;
+    transform:translateY(-1px);
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: white;
+    font-size:0.625em;
+    left: 7px;
+    opacity: 1;
+
+    &.error {
+        color: $error-color;
+    }
+}
+
+.label:focus-within > .textField,
+.textField:not(:placeholder-shown) {
+    border-color: $primary-color;
+
+    &.error {
+        border-color: $error-color;
+    }
+}
