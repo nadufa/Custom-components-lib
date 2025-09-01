@@ -1,13 +1,7 @@
 import classNames from 'classnames';
 import { FC, PropsWithChildren } from 'react';
 import s from './TextField.module.scss';
-
-export interface ITextField {
-  id: string;
-  label: string;
-  type: string;
-  error: boolean;
-}
+import { ITextField } from './types';
 
 export const TextField: FC<PropsWithChildren<ITextField>> = ({
   id,

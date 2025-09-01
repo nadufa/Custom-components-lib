@@ -1,0 +1,68 @@
+@import '../../shared/colors';
+
+$switch-slider-enabled-checked-color: rgb(149, 182, 227);
+$switch-knob-enabled-checked-color: rgb(56, 116, 203);
+
+$switch-slider-enabled-unchecked-color: rgb(159, 159, 159);
+$switch-knob-enabled-unchecked-color: rgb(255, 255, 255);
+
+$switch-slider-disabled-checked-color: rgb(229, 238, 249);
+$switch-knob-disabled-checked-color: rgb(175, 201, 233);
+
+$switch-slider-disabled-unchecked-color: rgb(185, 185, 185);
+$switch-knob-disabled-unchecked-color: rgb(239, 239, 239);
+
+.switch {
+	cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	width: 34px;
+	height: 14px;
+	border-radius: 25px;
+	background-color: $switch-slider-enabled-unchecked-color;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		background-color: $switch-knob-enabled-unchecked-color;
+		box-shadow: 
+			1px 1px 1px -0.5px gray,
+			-1px 0 1px -0.5px gray;
+		transition: left .3s;
+
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		background-color: $switch-slider-disabled-unchecked-color;
+
+		&::after {
+			background-color: $switch-knob-disabled-unchecked-color
+		}
+
+		&:checked {
+			background-color: $switch-slider-disabled-checked-color;
+
+			&::after {
+				background-color: $switch-knob-disabled-checked-color
+			}
+		}
+	}
+
+	&:checked {
+		transition: .4s;
+		background-color: $switch-slider-enabled-checked-color;
+
+		&::after {
+			left: 80%;
+			background-color: $switch-knob-enabled-checked-color;
+		}
+	}
+}

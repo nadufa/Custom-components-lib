@@ -1,12 +1,6 @@
-import { ChangeEvent, FC, InputHTMLAttributes, PropsWithChildren } from 'react';
+import { ChangeEvent, FC, PropsWithChildren, useState } from 'react';
 import s from './Switch.module.scss';
-
-export interface ISwitch extends InputHTMLAttributes<HTMLInputElement> {
-  id: string;
-  checked: boolean;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  disabled: boolean;
-}
+import { ISwitch } from './types';
 
 export const Switch: FC<PropsWithChildren<ISwitch>> = ({
   id,
@@ -15,6 +9,13 @@ export const Switch: FC<PropsWithChildren<ISwitch>> = ({
   disabled,
   ...props
 }) => {
+  const [isChecked, setIsChecked] = useState(checked);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(e.target.checked);
+    onChange?.(e);
+  };
+
   return (
     <>
       <label htmlFor={id} className={s.label}>
@@ -23,9 +24,9 @@ export const Switch: FC<PropsWithChildren<ISwitch>> = ({
           id={id}
           name={id}
           className={s.switch}
-          checked={checked}
+          checked={isChecked}
           disabled={disabled}
-          onChange={onChange}
+          onChange={handleChange}
           {...props}
         />
         <span className={s.slider}></span>

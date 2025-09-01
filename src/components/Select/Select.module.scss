@@ -1,4 +1,5 @@
-@import "../_variables";
+@import '../../shared/colors';
+@import '../../shared/fonts';
 
 .label{
     margin-bottom:15px;
@@ -6,7 +7,7 @@
     border-bottom:1px solid #ddd;
 }
 
-.textField {
+.select {
     font-family: $primary-font-family;;
     width:100%;
     padding:10px 5px;
@@ -39,8 +40,7 @@
     }
 }
 
-.label:focus-within > .span,
-.textField:not(:placeholder-shown) + .span{
+.label:focus-within > .span {
     color: $primary-color;
     transform:translateY(-1px);
     padding-left: 3px;
@@ -55,8 +55,23 @@
     }
 }
 
-.label:focus-within > .textField,
-.textField:not(:placeholder-shown) {
+.select:valid + .span {
+    color: $primary-color;
+    transform:translateY(-1px);
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: white;
+    font-size:0.625em;
+    left: 7px;
+    opacity: 1;
+}
+
+.label:not(:focus-within) > .span {
+    color: #848484;
+}
+
+
+.label:focus-within > .select {
     border-color: $primary-color;
 
     &.error {

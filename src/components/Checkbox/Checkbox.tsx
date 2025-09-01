@@ -1,10 +1,6 @@
-import { FC, InputHTMLAttributes, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import s from './Checkbox.module.scss';
-
-export interface ICheckbox extends InputHTMLAttributes<HTMLInputElement> {
-  id: string;
-  label: string;
-}
+import { ICheckbox } from './types';
 
 export const Checkbox: FC<PropsWithChildren<ICheckbox>> = ({
   id,

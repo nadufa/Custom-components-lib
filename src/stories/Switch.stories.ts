@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import { Switch } from '../Switch/Switch';
+import { Switch } from '../components/Switch/Switch';
 
 const meta = {
   title: 'Example/Switch',

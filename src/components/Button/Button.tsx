@@ -1,14 +1,7 @@
 import classNames from 'classnames';
 import { FC, PropsWithChildren } from 'react';
 import s from './Button.module.scss';
-
-type ButtonVariantType = 'text' | 'contained' | 'outlined';
-type ButtonSizeType = 'small' | 'medium' | 'large';
-
-export interface IButton {
-  variant: ButtonVariantType;
-  size: ButtonSizeType;
-}
+import { IButton } from './types';
 
 export const Button: FC<PropsWithChildren<IButton>> = ({
   variant = 'contained',

@@ -1,12 +1,6 @@
 import { FC } from 'react';
 import s from './Select.module.scss';
-
-export interface ISelect {
-  id: string;
-  label: string;
-  options: Array<string>;
-  error: boolean;
-}
+import { ISelect } from './types';
 
 export const Select: FC<ISelect> = ({ id, label, options, ...props }) => {
   return (

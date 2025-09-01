@@ -1,4 +1,5 @@
-@import "../_variables";
+@import '../../shared/colors';
+@import '../../shared/fonts';
 
 .label{
     margin-bottom:15px;
@@ -6,8 +7,8 @@
     border-bottom:1px solid #ddd;
 }
 
-.select {
-    font-family: $primary-font-family;;
+.textField {
+    font-family: $primary-font-family;
     width:100%;
     padding:10px 5px;
     margin-top:20px;
@@ -39,15 +40,8 @@
     }
 }
 
-// .select:valid + .span {
-//     color: #848484;
-
-//     &.error {
-//         color: $error-color;
-//     }
-// }
-
-.label:focus-within > .span {
+.label:focus-within > .span,
+.textField:not(:placeholder-shown) + .span{
     color: $primary-color;
     transform:translateY(-1px);
     padding-left: 3px;
@@ -62,38 +56,8 @@
     }
 }
 
-.select:valid + .span {
-    color: $primary-color;
-    transform:translateY(-1px);
-    padding-left: 3px;
-    padding-right: 3px;
-    background-color: white;
-    font-size:0.625em;
-    left: 7px;
-    opacity: 1;
-}
-
-.label:not(:focus-within) > .span {
-    color: #848484;
-}
-
-// .select:valid + .span {
-//     color: $primary-color;
-//     transform:translateY(-1px);
-//     padding-left: 3px;
-//     padding-right: 3px;
-//     background-color: white;
-//     font-size:0.625em;
-//     left: 7px;
-//     opacity: 1;
-
-//     &.error {
-//         color: $error-color;
-//     }
-// }
-
-
-.label:focus-within > .select {
+.label:focus-within > .textField,
+.textField:not(:placeholder-shown) {
     border-color: $primary-color;
 
     &.error {
