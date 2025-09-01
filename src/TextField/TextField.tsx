@@ -14,7 +14,6 @@ export const TextField: FC<PropsWithChildren<ITextField>> = ({
   label,
   type = 'text',
   error = false,
-  children,
   ...props
 }) => {
   const inputClassName = classNames(s.textField, error ? s.error : '');
@@ -29,8 +28,7 @@ export const TextField: FC<PropsWithChildren<ITextField>> = ({
         type={type}
         placeholder={label}
       />
-      {children}
-      <span className={spanClassName}>Name</span>
+      <span className={spanClassName}>{label}</span>
     </label>
   );
 };
