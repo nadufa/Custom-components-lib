@@ -12,59 +12,82 @@
 }
 
 .textField {
-    font-family: $primary-font-family;
-    width:100%;
-    padding:10px 5px;
-    margin-top:20px;
-    outline:none;
+    height: 23px;
+    width: 195px;
+    padding: 16.5px 14px;
+    margin-top: 20px;
+    outline: none;
     border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15px;
 
-    &.error {
-        border-color: $error-color;
+    &:hover {
+        border: 1px solid rgba(0, 0, 0, 0.87);
     }
 
     &::placeholder {
         opacity: 0;
+        font-size: 16px;
     }
 }
 
 .span{
     font-family: $primary-font-family;
     position:absolute;
-    top:-14px;
-    left:0;
+    top:-16px;
+    left: 5px;
     transform:translateY(15px);
-    font-size:0.825em;
     transition-duration:300ms;
     padding-left: 10px;
     opacity: 0.5;
+    font-size: 16px;
+    font-weight: 400;
+    height: 23px;
+    letter-spacing: 0.15px;
+}
 
-    &.error {
-        color: $error-color;
+.label:not(:focus-within) > .textField {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        border: 1px solid rgba(0, 0, 0, 0.87);
+    }
+
+    ~.span {
+        color: rgba(0, 0, 0, 0.6)
     }
 }
 
 .label:focus-within > .span,
 .textField:not(:placeholder-shown) + .span{
     color: $primary-color;
-    transform:translateY(-1px);
+    transform:translateY(-13.25px);
     padding-left: 3px;
     padding-right: 3px;
     background-color: white;
-    font-size:0.625em;
-    left: 7px;
+    font-size: 13.5px;               
+    left: 9px;
     opacity: 1;
-
-    &.error {
-        color: $error-color;
-    }
 }
 
 .label:focus-within > .textField,
 .textField:not(:placeholder-shown) {
-    border-color: $primary-color;
+    border: 2px solid $primary-color;
+}
 
+.label > .textField {
     &.error {
         border-color: $error-color;
+
+        &:hover {
+            border: 2px solid $error-color;
+        }
+
+        ~.span {
+            color: $error-color;
+            opacity: 1;
+        }
     }
 }
