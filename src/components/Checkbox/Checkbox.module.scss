@@ -4,18 +4,23 @@
     display: block;
     position: relative;
     cursor: pointer;
-	padding-left: 25px;
+		padding-left: 25px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0.15px;
 
 	.checkbox {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-    }
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+	}
 
 	&:has(.checkbox:disabled) {
 		color: #909090;
+		cursor: unset;
+		user-select: none;
 	}
 }
 

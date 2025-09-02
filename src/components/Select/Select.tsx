@@ -8,7 +8,9 @@ export const Select: FC<ISelect> = ({ id, label, options, ...props }) => {
       <select {...props} id={id} className={s.select} defaultValue="" required>
         <option disabled hidden value=""></option>
         {options.map((op) => (
-          <option value={op}>{op}</option>
+          <option value={op}>
+            <span className={s.optionLabel}>{op}</span>
+          </option>
         ))}
       </select>
       <span className={s.span}>{label}</span>

@@ -4,7 +4,6 @@
 .label{
     margin-bottom:15px;
     position:relative;
-    border-bottom:1px solid #ddd;
 }
 
 .select {
@@ -14,13 +13,12 @@
     line-height: 23px;
     height: 56px;
     min-width: 120px;
-    padding: 16.5px 32px 16.5px 14px;
-    margin-top:20px;
+    padding: 16.5px 10px 16.5px 14px;
     outline:none;
     border-radius: 4px;
-
-    &.error {
-        border-color: $error-color;
+    
+    span {
+        color: rgba(0, 0, 0, 0.87);
     }
 
     &::placeholder {
@@ -35,16 +33,12 @@
     font-weight: 400;
     line-height: 23px;
     position:absolute;
-    top:-18px;
+    top:-21px;
     left: 3px;
     transform:translateY(15px);
     transition-duration:300ms;
     padding-left: 10px;
     opacity: 0.8;
-
-    &.error {
-        color: $error-color;
-    }
 }
 
 .label:focus-within > .span {
@@ -56,10 +50,6 @@
     font-size: 12px;
     left: 7px;
     opacity: 1;
-
-    &.error {
-        color: $error-color;
-    }
 }
 
 .label:focus-within > .select {
@@ -84,8 +74,66 @@
 
 .label:focus-within > .select {
     border-color: $primary-color;
+}
 
-    &.error {
-        border-color: $error-color;
+
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+::picker(select) {
+    border: none;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+}
+
+select{
+    background: white;
+
+    &:open::picker-icon {
+        rotate: 180deg;
+    }
+
+    &::picker-icon {
+        color: rgba(0, 0, 0, 0.54);
+        transition: 0.4s rotate;
+    }
+}
+
+option {
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    padding: 10px;
+
+    > span {
+        font-family: $primary-font-family;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &:first-of-type {
+        display: none;
+    }
+
+    &::checkmark {
+        display: none;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    &:checked {
+        background-color: rgba(25, 118, 210, 0.08);
+        
+        &:hover {
+            background-color: rgba(25, 118, 210, 0.12);
+        }
+    }
+
+    &:active {
+        background-color: rgba(0, 0, 0, 0.2);
     }
 }

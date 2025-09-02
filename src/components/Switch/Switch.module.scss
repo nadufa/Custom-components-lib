@@ -7,11 +7,11 @@ $switch-knob-enabled-checked-color: rgb(56, 116, 203);
 $switch-slider-enabled-unchecked-color: rgb(159, 159, 159);
 $switch-knob-enabled-unchecked-color: rgb(255, 255, 255);
 
-$switch-slider-disabled-checked-color: rgb(229, 238, 249);
-$switch-knob-disabled-checked-color: rgb(175, 201, 233);
+$switch-slider-disabled-checked-color: rgba(25, 118, 210, 0.12);
+$switch-knob-disabled-checked-color: rgb(167, 202, 237);
 
-$switch-slider-disabled-unchecked-color: rgb(185, 185, 185);
-$switch-knob-disabled-unchecked-color: rgb(239, 239, 239);
+$switch-slider-disabled-unchecked-color: rgba(26, 30, 35, 0.12);
+$switch-knob-disabled-unchecked-color: rgb(245, 245, 245);
 
 * {
     font-family: $primary-font-family;
@@ -44,7 +44,7 @@ $switch-knob-disabled-unchecked-color: rgb(239, 239, 239);
 	}
 
 	&:disabled {
-		cursor: not-allowed;
+		cursor: unset;
 		background-color: $switch-slider-disabled-unchecked-color;
 
 		&::after {

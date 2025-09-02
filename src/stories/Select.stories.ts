@@ -16,16 +16,7 @@ export const Default: Story = {
   args: {
     id: 'name',
     label: 'Fruit',
-    options: ['banana', 'pineapple', 'melon'],
+    options: ['Banana', 'Pineapple', 'Melon'],
     error: false,
-  },
-};
-
-export const Error: Story = {
-  args: {
-    id: 'name',
-    label: 'Fruit',
-    options: ['banana', 'pineapple', 'melon'],
-    error: true,
   },
 };
