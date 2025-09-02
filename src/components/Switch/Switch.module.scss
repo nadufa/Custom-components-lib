@@ -1,4 +1,5 @@
 @import '../../shared/colors';
+@import '../../shared/fonts';
 
 $switch-slider-enabled-checked-color: rgb(149, 182, 227);
 $switch-knob-enabled-checked-color: rgb(56, 116, 203);
@@ -11,6 +12,10 @@ $switch-knob-disabled-checked-color: rgb(175, 201, 233);
 
 $switch-slider-disabled-unchecked-color: rgb(185, 185, 185);
 $switch-knob-disabled-unchecked-color: rgb(239, 239, 239);
+
+* {
+    font-family: $primary-font-family;
+}
 
 .switch {
 	cursor: pointer;

@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, PropsWithChildren, useState } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import s from './Switch.module.scss';
 import { ISwitch } from './types';
 
@@ -6,16 +6,9 @@ export const Switch: FC<PropsWithChildren<ISwitch>> = ({
   id,
   checked,
   onChange,
-  disabled,
+  disabled = false,
   ...props
 }) => {
-  const [isChecked, setIsChecked] = useState(checked);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(e.target.checked);
-    onChange?.(e);
-  };
-
   return (
     <>
       <label htmlFor={id} className={s.label}>
@@ -24,9 +17,9 @@ export const Switch: FC<PropsWithChildren<ISwitch>> = ({
           id={id}
           name={id}
           className={s.switch}
-          checked={isChecked}
+          checked={checked}
           disabled={disabled}
-          onChange={handleChange}
+          onChange={onChange}
           {...props}
         />
         <span className={s.slider}></span>

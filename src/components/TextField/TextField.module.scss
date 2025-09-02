@@ -1,6 +1,10 @@
 @import '../../shared/colors';
 @import '../../shared/fonts';
 
+* {
+    font-family: $primary-font-family;
+}
+
 .label{
     margin-bottom:15px;
     position:relative;

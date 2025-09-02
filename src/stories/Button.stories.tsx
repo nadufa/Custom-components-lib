@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { fn } from 'storybook/test';
 import { Button } from '../components';
 
 const meta = {
@@ -7,7 +8,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -17,7 +17,8 @@ export const SmallText: Story = {
   args: {
     size: 'small',
     variant: 'text',
-    children: 'SMALL',
+    children: <span>SMALL</span>,
+    onClick: fn(),
   },
 };
 
@@ -25,7 +26,8 @@ export const MediumText: Story = {
   args: {
     size: 'medium',
     variant: 'text',
-    children: 'MEDIUM',
+    children: <span>MEDIUM</span>,
+    onClick: fn(),
   },
 };
 
@@ -33,7 +35,8 @@ export const LargeText: Story = {
   args: {
     size: 'large',
     variant: 'text',
-    children: 'LARGE',
+    children: <span>LARGE</span>,
+    onClick: fn(),
   },
 };
 
@@ -41,7 +44,8 @@ export const SmallOutlined: Story = {
   args: {
     size: 'small',
     variant: 'outlined',
-    children: 'SMALL',
+    children: <span>SMALL</span>,
+    onClick: fn(),
   },
 };
 
@@ -49,7 +53,8 @@ export const MediumOutlined: Story = {
   args: {
     size: 'medium',
     variant: 'outlined',
-    children: 'MEDIUM',
+    children: <span>MEDIUM</span>,
+    onClick: fn(),
   },
 };
 
@@ -57,7 +62,8 @@ export const LargeOutlined: Story = {
   args: {
     size: 'large',
     variant: 'outlined',
-    children: 'LARGE',
+    children: <span>LARGE</span>,
+    onClick: fn(),
   },
 };
 
@@ -65,7 +71,8 @@ export const SmallContained: Story = {
   args: {
     size: 'small',
     variant: 'contained',
-    children: 'SMALL',
+    children: <span>SMALL</span>,
+    onClick: fn(),
   },
 };
 
@@ -73,7 +80,8 @@ export const MediumContained: Story = {
   args: {
     size: 'medium',
     variant: 'contained',
-    children: 'MEDIUM',
+    children: <span>MEDIUM</span>,
+    onClick: fn(),
   },
 };
 
@@ -81,6 +89,7 @@ export const LargeContained: Story = {
   args: {
     size: 'large',
     variant: 'contained',
-    children: 'LARGE',
+    children: <span>LARGE</span>,
+    onClick: fn(),
   },
 };
