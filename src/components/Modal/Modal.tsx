@@ -11,7 +11,14 @@ export const Modal: FC<PropsWithChildren<IModal>> = ({ open, onClose, children }
   };
 
   return (
-    <div className={clsx(s.modal, { [s.open]: open })} onClick={handleClick}>
+    <div
+      className={clsx(s.modal, { [s.open]: open })}
+      onClick={handleClick}
+      role='dialog'
+      aria-modal='true'
+      aria-labelledby='modal-title'
+      aria-describedby='modal-description'
+    >
       <div className={s.modalContent}>{children}</div>
     </div>
   );
