@@ -35,11 +35,7 @@ export const Default: Story = {
 
     return (
       <>
-        <Button
-          onClick={() => setIsOpen(true)}
-          size="medium"
-          variant="contained"
-        >
+        <Button onClick={() => setIsOpen(true)} size='medium' variant='contained'>
           Open modal
         </Button>
         <Modal open={isOpen} onClose={onCloseHandler}>
@@ -58,14 +54,13 @@ export const WithText: Story = {
       <>
         <h3 style={{ marginTop: 0 }}>The Wonderful World of Cats</h3>
         <p style={{ marginBottom: 0 }}>
-          Cats have captivated human hearts for centuries with their mysterious
-          demeanor and graceful movements. These enigmatic creatures possess a
-          unique blend of independence and affection that continues to puzzle
-          and delight their human companions. From ancient Egyptian temples to
-          modern city apartments, cats have maintained their status as both
-          revered deities and beloved pets. Fun fact: A cat's purr vibrates at a
-          frequency of 25–150 Hz, which is the same frequency used in
-          therapeutic healing for bone growth and pain relief!
+          Cats have captivated human hearts for centuries with their mysterious demeanor and
+          graceful movements. These enigmatic creatures possess a unique blend of independence and
+          affection that continues to puzzle and delight their human companions. From ancient
+          Egyptian temples to modern city apartments, cats have maintained their status as both
+          revered deities and beloved pets. Fun fact: A cats purr vibrates at a frequency of 25–150
+          Hz, which is the same frequency used in therapeutic healing for bone growth and pain
+          relief!
         </p>
       </>
     ),
@@ -80,11 +75,7 @@ export const WithText: Story = {
 
     return (
       <>
-        <Button
-          onClick={() => setIsOpen(true)}
-          size="medium"
-          variant="contained"
-        >
+        <Button onClick={() => setIsOpen(true)} size='medium' variant='contained'>
           Open modal
         </Button>
         <Modal open={isOpen} onClose={onCloseHandler}>

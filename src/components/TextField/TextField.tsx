@@ -15,13 +15,7 @@ export const TextField: FC<PropsWithChildren<ITextField>> = ({
 
   return (
     <label htmlFor={id} className={s.label}>
-      <input
-        {...props}
-        id={id}
-        className={inputClassName}
-        type={type}
-        placeholder={label}
-      />
+      <input {...props} id={id} className={inputClassName} type={type} placeholder={label} />
       <span className={spanClassName}>{label}</span>
     </label>
   );

@@ -8,7 +8,8 @@
     "build": "webpack --mode=production --node-env=production",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier --write . && eslint --ext .js,.jsx,.ts,.tsx src --fix"
   },
   "keywords": [],
   "author": "",

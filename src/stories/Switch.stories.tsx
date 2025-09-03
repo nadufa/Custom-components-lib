@@ -24,7 +24,7 @@ export const Default: Story = {
     const [isChecked, setIsChecked] = useState(checked);
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-      setIsChecked((prev) => !prev);
+      setIsChecked(prev => !prev);
       onChange(e);
     };
 

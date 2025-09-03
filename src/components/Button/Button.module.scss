@@ -2,78 +2,84 @@
 @import '../../shared/fonts';
 
 * {
-    font-family: $primary-font-family;
-    font-weight: 500;
+  font-family: $primary-font-family;
+  font-weight: 500;
 }
 
 .button {
-    cursor: pointer;
-    color: $primary-color;
-    border-radius: 4px;
+  cursor: pointer;
+  color: $primary-color;
+  border-radius: 4px;
+  border: none;
+
+  &.text {
     border: none;
+    background: none;
 
-    &.text {
-        border: none;
-        background: none;
-
-        &:hover {
-            background-color: rgba(25, 118, 210, 0.04);
-        }
-
-        &:active {
-            background-color: rgba(25, 118, 210, 0.2);
-        }
+    &:hover {
+      background-color: rgba(25, 118, 210, 0.04);
     }
 
-    &.contained {
-        background-color: $primary-color;
-        color: white;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    &:active {
+      background-color: rgba(25, 118, 210, 0.2);
+    }
+  }
 
-        &:hover {
-            background-color: rgb(21, 101, 192);
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-        }
+  &.contained {
+    background-color: $primary-color;
+    color: white;
+    box-shadow:
+      rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+      rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+      rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 
-        &:active {
-            background-color: rgba(25, 118, 210, 0.9);
-        }
+    &:hover {
+      background-color: rgb(21, 101, 192);
+      box-shadow:
+        rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+        rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+        rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
     }
 
-    &.outlined {
-        background: none;
-        border: 0.7px solid $primary-color;
+    &:active {
+      background-color: rgba(25, 118, 210, 0.9);
+    }
+  }
 
-        &:hover {
-            background-color: rgba(25, 118, 210, 0.04);
-        }
+  &.outlined {
+    background: none;
+    border: 0.7px solid $primary-color;
 
-        &:active {
-            background-color: rgba(25, 118, 210, 0.2);
-        }
+    &:hover {
+      background-color: rgba(25, 118, 210, 0.04);
     }
 
-    &.small {
-        padding: 4px 5px;
-        height: 30px;
-        font-size: 13px;
-        line-height: 22.75px;
-        letter-spacing: 0.37px;
+    &:active {
+      background-color: rgba(25, 118, 210, 0.2);
     }
+  }
 
-    &.medium {
-        padding: 5px 15px;
-        height: 35px;
-        font-size: 14px;
-        line-height: 24.5px;
-        letter-spacing: 0.39px;
-    }
+  &.small {
+    padding: 4px 5px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 22.75px;
+    letter-spacing: 0.37px;
+  }
 
-    &.large {
-        padding: 8px 22px;
-        height: 42px;
-        font-size: 15px;
-        line-height: 26.25px;
-        letter-spacing: 0.43px;
-    }
+  &.medium {
+    padding: 5px 15px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 24.5px;
+    letter-spacing: 0.39px;
+  }
+
+  &.large {
+    padding: 8px 22px;
+    height: 42px;
+    font-size: 15px;
+    line-height: 26.25px;
+    letter-spacing: 0.43px;
+  }
 }

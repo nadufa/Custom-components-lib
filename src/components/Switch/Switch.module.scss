@@ -14,59 +14,60 @@ $switch-slider-disabled-unchecked-color: rgba(26, 30, 35, 0.12);
 $switch-knob-disabled-unchecked-color: rgb(245, 245, 245);
 
 * {
-    font-family: $primary-font-family;
+  font-family: $primary-font-family;
 }
 
 .switch {
-	cursor: pointer;
-	-webkit-appearance: none;
-	appearance: none;
-	position: relative;
-	width: 34px;
-	height: 14px;
-	border-radius: 25px;
-	background-color: $switch-slider-enabled-unchecked-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 34px;
+  height: 14px;
+  border-radius: 25px;
+  background-color: $switch-slider-enabled-unchecked-color;
 
-	&::after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 20%;
-		transform: translate(-50%, -50%);
-		border-radius: 50%;
-		width: 20px;
-		height: 20px;
-		background-color: $switch-knob-enabled-unchecked-color;
-		box-shadow: 
-			rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-		transition: left .3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $switch-knob-enabled-unchecked-color;
+    box-shadow:
+      rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+      rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
+      rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    transition: left 0.3s;
+  }
 
-	}
+  &:disabled {
+    cursor: unset;
+    background-color: $switch-slider-disabled-unchecked-color;
 
-	&:disabled {
-		cursor: unset;
-		background-color: $switch-slider-disabled-unchecked-color;
+    &::after {
+      background-color: $switch-knob-disabled-unchecked-color;
+    }
 
-		&::after {
-			background-color: $switch-knob-disabled-unchecked-color
-		}
+    &:checked {
+      background-color: $switch-slider-disabled-checked-color;
 
-		&:checked {
-			background-color: $switch-slider-disabled-checked-color;
+      &::after {
+        background-color: $switch-knob-disabled-checked-color;
+      }
+    }
+  }
 
-			&::after {
-				background-color: $switch-knob-disabled-checked-color
-			}
-		}
-	}
+  &:checked {
+    transition: 0.4s;
+    background-color: $switch-slider-enabled-checked-color;
 
-	&:checked {
-		transition: .4s;
-		background-color: $switch-slider-enabled-checked-color;
-
-		&::after {
-			left: 80%;
-			background-color: $switch-knob-enabled-checked-color;
-		}
-	}
+    &::after {
+      left: 80%;
+      background-color: $switch-knob-enabled-checked-color;
+    }
+  }
 }

@@ -3,11 +3,7 @@ import { FC, MouseEvent, PropsWithChildren } from 'react';
 import s from './Modal.module.scss';
 import { IModal } from './types';
 
-export const Modal: FC<PropsWithChildren<IModal>> = ({
-  open,
-  onClose,
-  children,
-}) => {
+export const Modal: FC<PropsWithChildren<IModal>> = ({ open, onClose, children }) => {
   const handleClick = (event: MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
       onClose();

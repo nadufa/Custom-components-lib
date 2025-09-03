@@ -13,7 +13,7 @@ export const Switch: FC<PropsWithChildren<ISwitch>> = ({
     <>
       <label htmlFor={id} className={s.label}>
         <input
-          type="checkbox"
+          type='checkbox'
           id={id}
           name={id}
           className={s.switch}
