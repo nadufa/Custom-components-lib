@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { ChangeEvent, useState } from 'react';
 import { fn } from 'storybook/test';
-import { Switch } from '../components';
+import { Switch } from '..';
 
 const meta = {
   title: 'Example/Switch',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { Select } from '../components';
+import { Select } from '..';
 
 const meta = {
   title: 'Example/Select',

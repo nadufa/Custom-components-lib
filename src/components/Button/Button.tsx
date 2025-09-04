@@ -6,22 +6,22 @@ import { IButton } from './types';
 export const Button: FC<PropsWithChildren<IButton>> = ({
   variant = 'contained',
   size,
-  children,
+  ariaLabel,
   pressed,
   busy,
-  ariaLabel,
+  children,
   ...props
 }) => {
   const className = clsx(s.button, s[variant], s[size]);
 
   return (
     <button
+      type='button'
+      className={className}
       aria-pressed={pressed}
       aria-busy={busy}
       aria-label={ariaLabel}
-      type='button'
       {...props}
-      className={className}
     >
       {children}
     </button>

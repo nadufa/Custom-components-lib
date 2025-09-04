@@ -12,8 +12,8 @@ export const Checkbox: FC<PropsWithChildren<ICheckbox>> = ({
     <>
       <label htmlFor={id} className={s.label}>
         <input
-          type='checkbox'
           id={id}
+          type='checkbox'
           className={s.checkbox}
           aria-checked={indeterminate ? 'mixed' : undefined}
           {...props}

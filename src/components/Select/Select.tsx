@@ -6,17 +6,17 @@ export const Select: FC<ISelect> = ({ id, label, options, ...props }) => {
   return (
     <label htmlFor={id} className={s.label}>
       <select
-        {...props}
         id={id}
         className={s.select}
         defaultValue=''
-        required
         aria-labelledby={`${id}-label`}
+        required
+        {...props}
       >
         <option disabled hidden value=''></option>
-        {options.map((op, index) => (
-          <option value={op} key={index}>
-            {op}
+        {options?.map((option, index) => (
+          <option value={option} key={index}>
+            {option}
           </option>
         ))}
       </select>
