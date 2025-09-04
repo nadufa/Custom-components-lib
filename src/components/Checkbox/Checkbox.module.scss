@@ -1,0 +1,67 @@
+@use '../../shared/colors' as *;
+
+.label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &:has(.checkbox:disabled) {
+    color: #909090;
+    cursor: unset;
+    user-select: none;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 2px solid #606060;
+}
+
+.label input:checked ~ .checkmark {
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+}
+
+.label input:disabled ~ .checkmark {
+  border: 2px solid #909090;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label .checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
