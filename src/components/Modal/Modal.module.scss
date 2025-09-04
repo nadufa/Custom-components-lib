@@ -1,5 +1,5 @@
-@import '../../shared/colors';
-@import '../../shared/fonts';
+@use '../../shared/colors' as *;
+@use '../../shared/fonts' as *;
 
 * {
   font-family: $primary-font-family;

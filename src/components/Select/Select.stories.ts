@@ -17,6 +17,5 @@ export const Default: Story = {
     id: 'name',
     label: 'Fruit',
     options: ['Banana', 'Pineapple', 'Melon'],
-    error: false,
   },
 };

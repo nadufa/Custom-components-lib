@@ -1,5 +1,5 @@
-@import '../../shared/colors';
-@import '../../shared/fonts';
+@use '../../shared/colors' as *;
+@use '../../shared/fonts' as *;
 
 $switch-slider-enabled-checked-color: rgb(149, 182, 227);
 $switch-knob-enabled-checked-color: rgb(56, 116, 203);
